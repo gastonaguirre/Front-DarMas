@@ -1,6 +1,7 @@
 import React, {  useState } from 'react';
 import {  useDispatch } from 'react-redux';
-import   getPokeName   from '../../redux/action/getPokeName'
+import   getPokeName   from '../../redux/action/getPokeName';
+import './SearchBar.css';
 
 //hago una busqueda exacta por nombre del pokemon
 
@@ -20,8 +21,8 @@ export default function Search() {
 
     return (
         <div>
-            <input  type='text' placeholder='Search Pokemons...' onChange={(e) => handleSearchBar(e)} />
-            <button  onClick={(e) => handleSubmit(e)} type='submit'>Search</button>
+            <input className='searchInput' type='text' placeholder='Search Pokemons...' onChange={(e) => handleSearchBar(e)} />
+            <button className='pokeSearch' onClick={(e) => handleSubmit(e)} type='submit'>Search</button>
         </div>
     )
 }

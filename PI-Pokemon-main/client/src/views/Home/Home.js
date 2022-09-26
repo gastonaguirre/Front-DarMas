@@ -11,6 +11,7 @@ import Paginado from '../../components/Paginado/Paginado';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import orderPoke from '../../redux/action/orderPoke'
 import origin from '../../redux/action/origin'
+import './Home.css'
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -66,9 +67,9 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <div className='fondoH'>
 
-            <h1>Pokelist</h1>
+            <h1 className='titulo' >Pokelist</h1>
             <br/>
             <SearchBar />
             <br/>
@@ -76,18 +77,18 @@ export default function Home() {
             <br/>
            
                 <Link to='/createPokemon'>
-                    <button className='create' >Create Pokemon</button>
+                    <button className='crearHome' >Create Pokemon</button>
                 </Link>
             <br/>
-
-            <select onChange={(e) => handleOrderPoke(e)} >
+<h3 className='filterName'>filter:</h3>
+            <select className='order' onChange={(e) => handleOrderPoke(e)} >
                 <option value='ALL'>ALL</option>
                 <option value='A-Z'>A-Z</option>
                 <option value='Z-A'>Z-A</option>
             </select>
 
-            <select onChange={e => handleFilterType(e)}>
-                <option value="ALL">Type Filter...</option>
+            <select className='filter' onChange={e => handleFilterType(e)}>
+                <option value="ALL" >Type Filter...</option>
                 {
                     allTypes?.map(pt => {
                         return <option value={pt.name} key={pt.id}>{pt.name}</option>
@@ -107,9 +108,9 @@ export default function Home() {
                 <option value="db">Created</option>
             </select>
 
-            <button onClick={e => { handleReload(e) }}> RELOAD</button>
+            <button className='buttomHome' onClick={e => { handleReload(e) }}> RELOAD</button>
 
-            <div>
+            <div className='card'>
                 {pokemons?.map((p) => (
                     <Card
                         key={p.id}
