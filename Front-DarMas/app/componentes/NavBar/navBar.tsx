@@ -74,14 +74,26 @@ export default function SearchAppBar() {
           >
            Dar+
           </Typography>
+          <a href="/api/auth/logout"  >
+            <h2 >
+              logout
+            </h2>
+          </a>
+          
+
           <Search>
-            <SearchIconWrapper>
+            {/* <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
-            />
+            /> */}
+          <a href="/api/auth/login"  >
+            <h2 >
+              login
+            </h2>
+          </a>
           </Search>
         </Toolbar>
       </AppBar>

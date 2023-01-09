@@ -1,4 +1,4 @@
-import Navegation from './componentes/navegation';
+// import Navegation from './componentes/navegation';
 import { UserProvider } from '@auth0/nextjs-auth0/client';
 import SearchAppBar from './componentes/NavBar/navBar'
 
@@ -13,7 +13,7 @@ export default function RootLayout({
       <head />
       <body>
        <SearchAppBar/> 
-      <Navegation />
+      {/* <Navegation /> */}
         {children}
         </body>
     </html>
